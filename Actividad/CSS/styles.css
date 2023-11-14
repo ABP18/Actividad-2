@@ -1,0 +1,182 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Basic styles for login form */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-form {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f9f9f9;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login-form label,
+.login-form input,
+.login-form button,
+.login-form a {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.login-form input,
+.login-form button {
+    width: 100%;
+    padding: 8px;
+    border-radius: 3px;
+}
+
+.login-form button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: rgb(18, 26, 97);
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 70px; 
+    height: 70px; 
+    background: url('../assets/logo.png') no-repeat center ;
+    background-size: contain;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+.search-form {
+    display: flex;
+}
+
+.search-form input {
+    padding: 8px;
+}
+
+.search-form button {
+    padding: 8px 15px;
+    background: #ff1e00;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilos de la cuadrícula de elementos */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.item {
+    position: relative;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.item:hover .overlay {
+    display: flex;
+    flex-direction: column;
+}
+
+.overlay h3,
+.overlay p {
+    margin: 5px;
+    text-align: center;
+}
+.logout {
+    color: #fff; 
+    text-decoration: none;
+}
+
+.logout:hover {
+    color: red; 
+}
+
+.related-content {
+    display: flex; 
+}
+
+.related-item {
+    width: 100px;
+    height: 150px; 
+    margin-right: 10px; 
+    text-align: center; 
+}
+.basic-info {
+    text-align: center; 
+    max-width: 600px; 
+    margin: 0 auto;
+}
+.media{
+    text-align: center; 
+
+}
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
